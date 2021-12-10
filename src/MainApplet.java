@@ -3,20 +3,23 @@ import menu.OpenFile;
 import javax.swing.*;
 
 public class MainApplet {
+
+    static JFrame f;
+
     public static void main(String[] args) {
-        JFrame f = new JFrame("Resource pack editor");
-        Initialise(f);
+        f = new JFrame("Resource pack editor");
+        Initialise();
     }
 
-    private static void Initialise(JFrame f) {
-        MakeMenu(f);
+    private static void Initialise() {
+        MakeMenu();
         f.setSize(800, 1000);
         f.setLayout(null);
         f.setVisible(true);
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    private static void MakeMenu(JFrame f) {
+    private static void MakeMenu() {
         JMenu menu;
         JMenuBar mb = new JMenuBar();
         menu = new JMenu("File");
