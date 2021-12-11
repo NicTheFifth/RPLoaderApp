@@ -1,13 +1,14 @@
-package menu;
+package app.menu;
 
-import viewPort.BlockstateList;
+import app.AppLoader;
+import app.viewPort.BlockstateList;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-public class OpenFile<AppLoader> implements ActionListener {
+public class OpenFile implements ActionListener {
     AppLoader appLoader;
     JMenu bar;
     JMenuItem open;

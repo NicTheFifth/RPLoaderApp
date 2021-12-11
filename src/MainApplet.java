@@ -1,8 +1,4 @@
-import lombok.Getter;
-import menu.*;
-import viewPort.BlockstateList;
-
-import javax.swing.*;
+import app.AppLoader;
 
 public class MainApplet {
 

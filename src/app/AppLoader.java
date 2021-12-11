@@ -1,19 +1,22 @@
-import lombok.Getter;
-import menu.OpenFile;
-import viewPort.BlockstateList;
+package app;
+
+import app.menu.OpenFile;
+import app.viewPort.BlockstateList;
 
 import javax.swing.*;
 
 public class AppLoader {
 
-    @Getter
+    AppLoader me;
+
     JFrame f;
-    @Getter
-    OpenFile<AppLoader> of;
-    @Getter
-    BlockstateList<AppLoader> bsL;
+
+    OpenFile of;
+
+    BlockstateList bsL;
 
     public AppLoader(){
+        me = this;
         f = new JFrame("Resource pack editor");
         Initialise();
     }
@@ -29,11 +32,23 @@ public class AppLoader {
         JMenu menu;
         JMenuBar mb = new JMenuBar();
         menu = new JMenu("File");
-        bsL = new BlockstateList<>(this);
-        of = new OpenFile<>(menu, this);
+        bsL = new BlockstateList(me);
+        of = new OpenFile(menu, me);
         of.setUp();
 
         mb.add(menu);
         f.setJMenuBar(mb);
+    }
+
+    public JFrame getF() {
+        return this.f;
+    }
+
+    public OpenFile getOf() {
+        return this.of;
+    }
+
+    public BlockstateList getBsL() {
+        return this.bsL;
     }
 }

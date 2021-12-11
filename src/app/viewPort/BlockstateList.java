@@ -1,9 +1,11 @@
-package viewPort;
+package app.viewPort;
+
+import app.AppLoader;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-public class BlockstateList<AppLoader> {
+public class BlockstateList {
     AppLoader appLoader;
     JTree jt;
 
@@ -15,5 +17,6 @@ public class BlockstateList<AppLoader> {
     }
     public static void Update(){
         DefaultMutableTreeNode test = new DefaultMutableTreeNode("test");
+        
     }
 }
