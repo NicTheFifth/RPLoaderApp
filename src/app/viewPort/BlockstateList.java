@@ -17,6 +17,6 @@ public class BlockstateList {
     }
     public static void Update(){
         DefaultMutableTreeNode test = new DefaultMutableTreeNode("test");
-        
+
     }
 }
